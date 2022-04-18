@@ -28,7 +28,6 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-color: #dfe4f8;
 }
 
 .wrapper {
@@ -40,14 +39,69 @@ body {
 .header {
   overflow: hidden;
   position: relative;
-}
-.header__img {
-  background-color: #dfe4f8;
   width: 100vw;
   height: 100vh;
 }
-.header .hamburger {
+.header .button-contact {
+  display: flex;
+  justify-content: center;
+}
+.header__button-contact {
   position: absolute;
+  bottom: 32%;
+  text-decoration: none;
+  background-color: #ffd13b;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: dodgerblue;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.header__button-contact:hover {
+  transform: scale(1.2);
+  color: #ffd13b;
+  background-color: dodgerblue;
+}
+.header__img {
+  background-image: url(../img/small/mitchell-luo-RAliDqgJKbE-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__img2 {
+  background-image: url(../img/small/kevin-woblick-oM9Ygakc8tI-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__img3 {
+  background-image: url(../img/small/ricardo-gomez-angel-9AoXmg7PnQI-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__shadow {
+  background: #03091a;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+.header .hamburger {
+  position: fixed;
   top: 2em;
   left: 0.5em;
   z-index: 100;
@@ -55,6 +109,39 @@ body {
 }
 .header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
   z-index: 500;
+  background-color: #fff;
+}
+.header__text--box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 25%;
+  left: 50%;
+  width: 250px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1rem;
+  background-color: dodgerblue;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+.header__text--main {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 450;
+  position: relative;
+}
+.header__text--main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1rem;
+  background-color: #ffd13b;
+}
+.header__text--paragraph {
+  font-size: 1.2rem;
 }
 
 .nav {
@@ -74,6 +161,16 @@ body {
   transition: transform 0.3s;
   z-index: 10;
   transform: translateY(-102%);
+}
+.nav-mobile-logo {
+  position: relative;
+  bottom: 10%;
+  margin: 0 auto;
+  height: 10rem;
+  width: 24rem;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/logo-klimar.png");
 }
 .nav-mobile--active {
   transform: translateY(0);
@@ -108,17 +205,49 @@ body {
 }
 
 @media (min-width: 992px) {
+  .header__img {
+    background-image: url("../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg");
+  }
+  .header__img2 {
+    background-image: url("../img/big/kevin-woblick-oM9Ygakc8tI-unsplash (1).jpg");
+  }
+  .header__img3 {
+    background-image: url("../img/big/ricardo-gomez-angel-9AoXmg7PnQI-unsplash (1).jpg");
+  }
+  .header .header__text--box {
+    width: 40rem;
+    padding: 50px;
+  }
+  .header__text--main {
+    font-size: 3rem;
+  }
+  .header__text--paragraph {
+    font-size: 2rem;
+  }
+
   .nav {
-    justify-content: center;
-    margin-top: 2rem;
-    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    z-index: 10;
+    width: 100%;
   }
   .nav-desktop {
+    position: fixed;
     display: flex;
+    background-color: #dfe4f8;
+  }
+  .nav-desktop::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: dodgerblue;
   }
   .nav-desktop-logo {
     margin-right: 5rem;
-    height: 100%;
+    height: 80px;
     width: 200px;
     background-position: center;
     background-size: cover;
@@ -127,6 +256,20 @@ body {
 
   .hamburger, .nav-mobile {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header .header__text--box {
+    width: 40rem;
+    padding: 50px;
+    left: 50%;
+    top: 20%;
+  }
+  .header__text--main {
+    font-size: 3rem;
+  }
+  .header__text--paragraph {
+    font-size: 2rem;
   }
 }
 
