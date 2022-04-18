@@ -1,5 +1,139 @@
-* {
+@import "footer";
+@import "colors";
+@import "large";
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  background-color: $backgroundColor;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+//header
+
+.header {
+  overflow: hidden;
+  position: relative;
+
+  &__img {
+    background-color: $backgroundColor;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 2em;
+    left: 0.5em;
+    z-index: 100;
+    transform: translateY(-50%);
+
+    &-inner, &-inner::before, &-inner::after {
+      z-index: 500;
+    }
+  }
+}
+
+.nav {
+  height: 100vh;
+
+
+  &-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    transition: transform .3s;
+    z-index: 10;
+    transform: translateY(-102%);
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  &-desktop {
+    display: none;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $mainTextColor;
+    font-size: 2rem;
+    transition: color .3s, transform .3s;
+
+    &:hover {
+      color: $blueColorText;
+      transform: scale(1.1);
+    }
+
+    &::before {
+      content: '';
+      height: 1.5px;
+      width: 65px;
+      background-color: $blueColorText;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+//media query
+
+@media(min-width: 992px) {
+  .header {
+  }
+  .nav {
+    justify-content: center;
+    margin-top: 2rem;
+    height: 80px;
+
+    &-desktop {
+      display: flex;
+
+      &-logo {
+        margin-right: 5rem;
+        height: 100%;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../img/logo-klimar.png");
+      }
+    }
+  }
+
+  .hamburger, .nav-mobile {
+    display: none;
+  }
 }

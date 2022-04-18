@@ -1,7 +1,133 @@
-* {
+.footer {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .nav-desktop {
+    display: block;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background-color: #dfe4f8;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  overflow: hidden;
+  position: relative;
+}
+.header__img {
+  background-color: #dfe4f8;
+  width: 100vw;
+  height: 100vh;
+}
+.header .hamburger {
+  position: absolute;
+  top: 2em;
+  left: 0.5em;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+.header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
+  z-index: 500;
+}
+
+.nav {
+  height: 100vh;
+}
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  transition: transform 0.3s;
+  z-index: 10;
+  transform: translateY(-102%);
+}
+.nav-mobile--active {
+  transform: translateY(0);
+}
+.nav-desktop {
+  display: none;
+}
+.nav__link {
+  position: relative;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav__link:hover {
+  color: dodgerblue;
+  transform: scale(1.1);
+}
+.nav__link::before {
+  content: "";
+  height: 1.5px;
+  width: 65px;
+  background-color: dodgerblue;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .nav {
+    justify-content: center;
+    margin-top: 2rem;
+    height: 80px;
+  }
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-desktop-logo {
+    margin-right: 5rem;
+    height: 100%;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/logo-klimar.png");
+  }
+
+  .hamburger, .nav-mobile {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

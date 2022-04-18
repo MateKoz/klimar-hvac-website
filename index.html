@@ -5,13 +5,49 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f6b17e6e38.js" crossorigin="anonymous"></script>
+    <link href="scss/hamburger.css" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
-    <title>KLIMAR</title>
+    <title>klimar</title>
 </head>
-
 <body>
+<!--hamburger menu-->
+<header class="header wrapper">
+    <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <!--    navigation for mobile-->
+    <nav class="nav nav-mobile">
+        <a class="nav__link" href="#aboutus">o firmie</a>
+        <a class="nav__link" href="#offers">oferta</a>
+        <a class="nav__link" href="#realization">realizacje</a>
+        <a class="nav__link" href="#work">praca</a>
+        <a class="nav__link" href="#contact">kontakt</a>
+    </nav>
 
+    <!--    navigation for desktop-->
+    <nav class="nav nav-desktop">
+        <a href="#" class="nav-desktop-logo"></a>
+        <div class="nav-desktop-link">
+            <a class="nav__link" href="#aboutus">o firmie</a>
+            <a class="nav__link" href="#offers">oferta</a>
+            <a class="nav__link" href="#realization">realizacje</a>
+            <a class="nav__link" href="#work">praca</a>
+            <a class="nav__link" href="#contact">kontakt</a>
+        </div>
+    </nav>
 
+    <div class="header__img">
+        <div class="header__shadow"></div>
+    </div>
+</header>
+
+<!--<footer class="footer">-->
+<!--    <p class="footer_bottom-text"> &copy; <span class="footer__year"></span> KLIMAR</p>-->
+<!--</footer>-->
 
 <script src="js/script.js"></script>
 </body>
