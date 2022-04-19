@@ -2,6 +2,7 @@
 @import "colors";
 @import "large";
 @import "components";
+@import "cards";
 
 *,
 *::before,
@@ -220,6 +221,14 @@ body {
       bottom: 5px;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+}
+
+.offer {
+  &__title {
+    &--h3 {
+      margin-bottom: 4rem;
     }
   }
 }

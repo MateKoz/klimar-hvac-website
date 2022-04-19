@@ -16,3 +16,4 @@ hamburgerIcon.addEventListener('click', menuHamburger)
 // current year in footer
 currentYear = (new Date()).getFullYear();
 footerYear.innerText = `${currentYear} `
+
