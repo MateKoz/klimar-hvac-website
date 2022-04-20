@@ -12,7 +12,7 @@
 }
 
 .col {
-  width: 25%;
+  width: 33%;
   cursor: pointer;
 }
 
@@ -43,15 +43,37 @@
   color: #fff;
   font-size: 1.5rem;
 }
-
-.back {
-  background-image: url(../img/accountant-4008603-270x270.jpg);
-  border-radius: 8px;
+.front__img {
+  width: 100%;
+  height: auto;
 }
 
-.front {
-  background-image: url(../img/accountant-4008603-270x270.jpg);
+.first__img {
+  background-image: url(../img/cards/kosztorys_i_wycena.jpg);
 }
+
+.second__img {
+  background-image: url(../img/cards/projekty_sanitarne.jpg);
+}
+
+.third__img {
+  background-image: url(../img/cards/cleanroom.jpg);
+}
+
+.fourth__img {
+  background-image: url(../img/cards/produkcja_elementow_wentylacyjnych.jpg);
+}
+
+.fifth__img {
+  background-image: url(../img/cards/montaz_i_serwis.jpg);
+}
+
+.sixth__img {
+  background-image: url(../img/cards/automatyka.jpg);
+}
+
+
+
 
 .front:after {
   position: absolute;
@@ -93,7 +115,6 @@
     opacity: 0.6;
     position: absolute;
     transform: translateX(-50%);
-    overflow: hidden;
     border-radius: 8px;
 
 }
@@ -105,9 +126,16 @@
     border-radius: 0.8rem;
     cursor: pointer;
     color: $yellowColorText;
+    opacity: 0.8;
     font-weight: bold;
     font-size: 1.6rem;
     margin-top: 3rem;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.1);
+      font-weight: normal;
+    }
   }
 }
 
