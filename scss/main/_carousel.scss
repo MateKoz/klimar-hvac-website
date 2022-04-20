@@ -1,0 +1,14 @@
+
+.trusted {
+  margin-top: 4rem;
+
+  .trusted__carousel {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+
+    &-img {
+      padding: 0 10px
+    }
+  }
+}
