@@ -489,6 +489,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -534,7 +535,7 @@ body {
   .nav-desktop {
     position: fixed;
     display: flex;
-    background-color: #dfe4f8;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   .nav-desktop::before {
     position: absolute;
