@@ -65,11 +65,11 @@
 }
 
 .fifth__img {
-  background-image: url(../img/cards/montaz_i_serwis.jpg);
+  background-image: url("../img/cards/montaz_i_serwis.jpg");
 }
 
 .sixth__img {
-  background-image: url(../img/cards/automatyka.jpg);
+  background-image: url("../img/cards/automatyka.jpg");
 }
 
 
@@ -212,6 +212,11 @@
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+}
+
+.offer__background {
+  background-image: url("../img/small/background-offer-small.jpg");
+  background-position: center;
 }
 
 @media screen and (max-width: 64rem) {

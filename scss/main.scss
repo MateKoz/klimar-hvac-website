@@ -2,11 +2,11 @@
 @import "colors";
 @import "large";
 @import "components";
-@import "cards";
 @import "mixin";
 @import "main/header";
 @import "main/offer";
 @import "main/carousel";
+@import "cards";
 
 *,
 *::before,
@@ -37,6 +37,7 @@ body {
 //media query
 
 @media(min-width: 992px) {
+
   .header {
     &__img {
       background-image: url('../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg');
@@ -101,7 +102,7 @@ body {
     display: none;
   }
   .offer__background {
-    background-image: url(../img/big/offer-background-big.jpg);
+    background-image: url("../img/big/offer-background-big.jpg");
 
   }
 }
