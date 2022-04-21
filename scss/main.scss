@@ -3,9 +3,6 @@
 @import "large";
 @import "components";
 @import "mixin";
-@import "main/header";
-@import "main/offer";
-@import "main/carousel";
 @import "cards";
 @import "hamburger";
 
@@ -33,6 +30,230 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+}
+
+
+/////////////////////////////////////
+//header
+////////////////////////////////////
+
+.header {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  .button-contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-contact {
+    position: absolute;
+    bottom: 2rem;
+    text-decoration: none;
+    background-color: $yellowColorText;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    color: $blueColorText;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $yellowColorText;
+      background-color: $blueColorText;
+
+    }
+  }
+
+  &__img {
+    background-image: url("../img/big/kevin-woblick-oM9Ygakc8tI-unsplash (1).jpg");
+    @include imgHeader;
+  }
+
+  &__img2 {
+    background-image: url("../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg");
+    @include imgHeader;
+  }
+
+  &__img3 {
+    background-image: url("../img/big/ricardo-gomez-angel-9AoXmg7PnQI-unsplash (1).jpg");
+    @include imgHeader;
+  }
+
+  &__shadow {
+    background: #03091a;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 2em;
+    left: 0.5em;
+    z-index: 100;
+    transform: translateY(-50%);
+
+    &-inner, &-inner::before, &-inner::after {
+      z-index: 500;
+      background-color: #fff;
+    }
+  }
+
+
+  &__text--box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 37%;
+    left: 50%;
+    width: 250px;
+    padding: 15px 30px;
+    color: $white;
+    font-size: 1rem;
+    background-color: $blueColorText;
+    border-radius: 8px;
+    opacity: 0.9;
+  }
+
+  &__text--main {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 450;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -1rem;
+      background-color: $yellowColorText;
+    }
+
+    & span {
+      color: $yellowColorText;
+    }
+  }
+
+  &__text--paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+.nav {
+  height: 100%;
+  position: sticky;
+
+  &-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    transition: transform .3s;
+    z-index: 10;
+    transform: translateY(-102%);
+
+    &-logo {
+      position: relative;
+      bottom: 10%;
+      margin: 0 auto;
+      height: 10rem;
+      width: 24rem;
+      background-position: center;
+      background-size: cover;
+      background-image: url("../img/logo-klimar.png");
+    }
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  &-desktop {
+    display: none;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $mainTextColor;
+    font-size: 2rem;
+    transition: color .3s, transform .3s;
+
+    &:hover {
+      color: $blueColorText;
+      transform: scale(1.2);
+    }
+
+    &::before {
+      content: '';
+      height: 1.5px;
+      width: 65px;
+      background-color: $blueColorText;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+////////////////////////////
+///offer
+////////////////////////////
+.offer {
+  position: relative;
+  width: 100vw;
+  padding-bottom: 3rem;
+
+  &__background {
+    position: absolute;
+    background-image: url("../img/small/background-offer-small.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  &__title {
+    &--h3 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+/////////////////////////////
+///carousel trusted us
+////////////////////////////
+.trusted {
+  margin-top: 4rem;
+
+  .trusted__carousel {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+
+    &-img {
+      padding: 0 10px
+    }
+  }
 }
 
 //media query
@@ -107,6 +328,7 @@ body {
 
   }
 }
+
 
 @media(min-width: 768px) {
 

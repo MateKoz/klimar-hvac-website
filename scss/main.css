@@ -53,208 +53,6 @@
   bottom: 0;
 }
 
-.header {
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-.header .button-contact {
-  display: flex;
-  justify-content: center;
-}
-.header__button-contact {
-  position: absolute;
-  bottom: 2rem;
-  text-decoration: none;
-  background-color: #ffd13b;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  color: dodgerblue;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-.header__button-contact:hover {
-  transform: scale(1.2);
-  color: #ffd13b;
-  background-color: dodgerblue;
-}
-.header__img {
-  background-image: url("../../img/big/kevin-woblick-oM9Ygakc8tI-unsplash (1).jpg");
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.header__img2 {
-  background-image: url("../../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg");
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.header__img3 {
-  background-image: url("../../img/big/ricardo-gomez-angel-9AoXmg7PnQI-unsplash (1).jpg");
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.header__shadow {
-  background: #03091a;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
-}
-.header .hamburger {
-  position: fixed;
-  top: 2em;
-  left: 0.5em;
-  z-index: 100;
-  transform: translateY(-50%);
-}
-.header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
-  z-index: 500;
-  background-color: #fff;
-}
-.header__text--box {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  transform: translateX(-50%);
-  top: 37%;
-  left: 50%;
-  width: 250px;
-  padding: 15px 30px;
-  color: white;
-  font-size: 1rem;
-  background-color: dodgerblue;
-  border-radius: 8px;
-  opacity: 0.9;
-}
-.header__text--main {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  font-weight: 450;
-  position: relative;
-}
-.header__text--main::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -1rem;
-  background-color: #ffd13b;
-}
-.header__text--main span {
-  color: #ffd13b;
-}
-.header__text--paragraph {
-  font-size: 1.2rem;
-}
-
-.nav {
-  height: 100%;
-  position: sticky;
-}
-.nav-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  transition: transform 0.3s;
-  z-index: 10;
-  transform: translateY(-102%);
-}
-.nav-mobile-logo {
-  position: relative;
-  bottom: 10%;
-  margin: 0 auto;
-  height: 10rem;
-  width: 24rem;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../../img/logo-klimar.png");
-}
-.nav-mobile--active {
-  transform: translateY(0);
-}
-.nav-desktop {
-  display: none;
-}
-.nav__link {
-  position: relative;
-  display: inline-block;
-  margin: 0.5em;
-  padding: 0.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #3d3d3d;
-  font-size: 2rem;
-  transition: color 0.3s, transform 0.3s;
-}
-.nav__link:hover {
-  color: dodgerblue;
-  transform: scale(1.2);
-}
-.nav__link::before {
-  content: "";
-  height: 1.5px;
-  width: 65px;
-  background-color: dodgerblue;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.offer {
-  position: relative;
-  width: 100vw;
-  padding-bottom: 3rem;
-}
-.offer__background {
-  position: absolute;
-  background-image: url(../../img/small/background-offer-small.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  opacity: 0.3;
-}
-.offer__title--h3 {
-  margin-bottom: 3rem;
-}
-
-.trusted {
-  margin-top: 4rem;
-}
-.trusted .trusted__carousel {
-  display: flex;
-  align-items: center;
-  padding: 5rem;
-}
-.trusted .trusted__carousel-img {
-  padding: 0 10px;
-}
-
 .cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,17 +265,12 @@
   background-position: center;
 }
 
-@media screen and (max-width: 64rem) {
-  .col {
-    width: calc(33.333333% - 2rem);
-  }
-}
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 996px) {
   .col {
     width: calc(50% - 2rem);
   }
 }
-@media screen and (max-width: 32rem) {
+@media screen and (max-width: 580px) {
   .col {
     width: 100%;
     margin: 0 0 2rem 0;
@@ -612,6 +405,208 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+}
+
+.header {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.header .button-contact {
+  display: flex;
+  justify-content: center;
+}
+.header__button-contact {
+  position: absolute;
+  bottom: 2rem;
+  text-decoration: none;
+  background-color: #ffd13b;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  color: dodgerblue;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.header__button-contact:hover {
+  transform: scale(1.2);
+  color: #ffd13b;
+  background-color: dodgerblue;
+}
+.header__img {
+  background-image: url("../img/big/kevin-woblick-oM9Ygakc8tI-unsplash (1).jpg");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__img2 {
+  background-image: url("../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__img3 {
+  background-image: url("../img/big/ricardo-gomez-angel-9AoXmg7PnQI-unsplash (1).jpg");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__shadow {
+  background: #03091a;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+.header .hamburger {
+  position: fixed;
+  top: 2em;
+  left: 0.5em;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+.header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
+  z-index: 500;
+  background-color: #fff;
+}
+.header__text--box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 37%;
+  left: 50%;
+  width: 250px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1rem;
+  background-color: dodgerblue;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+.header__text--main {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 450;
+  position: relative;
+}
+.header__text--main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1rem;
+  background-color: #ffd13b;
+}
+.header__text--main span {
+  color: #ffd13b;
+}
+.header__text--paragraph {
+  font-size: 1.2rem;
+}
+
+.nav {
+  height: 100%;
+  position: sticky;
+}
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  transition: transform 0.3s;
+  z-index: 10;
+  transform: translateY(-102%);
+}
+.nav-mobile-logo {
+  position: relative;
+  bottom: 10%;
+  margin: 0 auto;
+  height: 10rem;
+  width: 24rem;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/logo-klimar.png");
+}
+.nav-mobile--active {
+  transform: translateY(0);
+}
+.nav-desktop {
+  display: none;
+}
+.nav__link {
+  position: relative;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav__link:hover {
+  color: dodgerblue;
+  transform: scale(1.2);
+}
+.nav__link::before {
+  content: "";
+  height: 1.5px;
+  width: 65px;
+  background-color: dodgerblue;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.offer {
+  position: relative;
+  width: 100vw;
+  padding-bottom: 3rem;
+}
+.offer__background {
+  position: absolute;
+  background-image: url("../img/small/background-offer-small.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
+.offer__title--h3 {
+  margin-bottom: 3rem;
+}
+
+.trusted {
+  margin-top: 4rem;
+}
+.trusted .trusted__carousel {
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+}
+.trusted .trusted__carousel-img {
+  padding: 0 10px;
 }
 
 @media (min-width: 992px) {
