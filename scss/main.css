@@ -19,7 +19,7 @@
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: normal;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 .heading::before {
   content: "";
@@ -44,7 +44,7 @@
   background-color: #ffd13b;
 }
 
-.underline::after {
+.underline::before {
   content: "";
   height: 3px;
   width: 100%;
@@ -597,9 +597,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.trusted {
-  margin-top: 4rem;
-}
 .trusted .trusted__carousel {
   display: flex;
   align-items: center;
@@ -607,6 +604,37 @@ body {
 }
 .trusted .trusted__carousel-img {
   padding: 0 10px;
+}
+
+.realization {
+  position: relative;
+}
+.realization::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: dodgerblue;
+  position: absolute;
+  top: -3px;
+}
+.realization__box--main {
+  position: absolute;
+  background-position: center;
+  background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
+  width: 100%;
+}
+.realization .realization__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.realization .realization__box--background {
+  background-color: dodgerblue;
+  width: 100rem;
+  height: 50rem;
+  border-radius: 8px;
+  opacity: 0.9;
 }
 
 @media (min-width: 992px) {

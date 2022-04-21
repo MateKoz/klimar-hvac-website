@@ -243,7 +243,7 @@ body {
 ///carousel trusted us
 ////////////////////////////
 .trusted {
-  margin-top: 4rem;
+  //margin-top: 4rem;
 
   .trusted__carousel {
     display: flex;
@@ -252,6 +252,46 @@ body {
 
     &-img {
       padding: 0 10px
+    }
+  }
+}
+
+/////////////////////////////////
+///realization
+/////////////////////////////////
+
+.realization {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: $blueColorText;
+    position: absolute;
+    top: -3px;
+  }
+
+  &__box--main {
+    position: absolute;
+    background-position: center;
+    background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
+    width: 100%;
+
+  }
+
+  .realization__box {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    &--background {
+      background-color: $blueColorText;
+      width: 100rem;
+      height: 50rem;
+      border-radius: 8px;
+      opacity: 0.9;
     }
   }
 }
