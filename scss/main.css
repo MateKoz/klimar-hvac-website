@@ -611,7 +611,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
-.realization__box--shadow {
+.realization__bg--shadow {
   background-color: #000000;
   width: 100%;
   height: 100%;
@@ -627,7 +627,7 @@ body {
   position: absolute;
   top: -3px;
 }
-.realization__box--main {
+.realization__bg {
   position: absolute;
   background-position: center;
   background-size: cover;
@@ -636,104 +636,6 @@ body {
   opacity: 0.9;
   height: 100vh;
   z-index: -1;
-}
-.realization__title {
-  color: white;
-}
-.realization .realization__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 80vh;
-  margin-top: 5rem;
-}
-.realization .realization__box--background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: dodgerblue;
-  width: 95%;
-  height: 100%;
-  border-radius: 8px;
-  opacity: 0.9;
-  margin: 0 auto;
-}
-.realization .realization__box--images {
-  height: 70%;
-  width: 100%;
-}
-.realization .realization__box--images img {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-.realization .realization__box--text {
-  position: relative;
-  margin: 1rem;
-  height: 30%;
-  width: 100%;
-  padding: 1rem;
-}
-.realization .realization__box--text-description h3 {
-  color: #ffd13b;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.realization .realization__box--text-description p:nth-child(2) {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.realization .realization__box--text-description p {
-  color: white;
-}
-.realization .realization__box--text-description p span {
-  color: #ffd13b;
-  font-size: 2.1rem;
-}
-.realization .realization__box .realization__button {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.realization .realization__box .realization__button-btn {
-  position: absolute;
-  background-color: #ffd13b;
-  border: none;
-  color: dodgerblue;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.realization .realization__bottom {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.realization .realization__bottom-text {
-  background-color: rgba(0, 0, 0, 0.4);
-  font-size: 2rem;
-  color: white;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-weight: bold;
-}
-.realization .realization__bottom-text span {
-  color: dodgerblue;
-  position: relative;
-}
-.realization .realization__bottom-text span::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #ffd13b;
 }
 
 @media (min-width: 992px) {
