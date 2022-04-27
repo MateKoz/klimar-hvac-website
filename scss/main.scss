@@ -295,6 +295,43 @@ body {
   }
 }
 
+///////////////////////////////////////////////////////////////////////////////
+.realization {
+  width: 100vw;
+  height: 100vh;
+}
+
+.realization__box {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .realization__box--image {
+    height: 30rem;
+    width: 30rem;
+    background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .realization__box--text {
+    height: 30rem;
+    width: 30rem;
+    background-color: blue;
+  }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////
+////////footer
+//////////////////////////////
+.footer {
+  text-align: center;
+}
 
 //media query
 

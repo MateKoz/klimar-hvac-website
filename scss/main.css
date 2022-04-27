@@ -638,6 +638,35 @@ body {
   z-index: -1;
 }
 
+.realization {
+  width: 100vw;
+  height: 100vh;
+}
+
+.realization__box {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.realization__box .realization__box--image {
+  height: 30rem;
+  width: 30rem;
+  background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.realization__box .realization__box--text {
+  height: 30rem;
+  width: 30rem;
+  background-color: blue;
+}
+
+.footer {
+  text-align: center;
+}
+
 @media (min-width: 992px) {
   .header__img {
     background-image: url("../img/big/mitchell-luo-RAliDqgJKbE-unsplash (1).jpg");
