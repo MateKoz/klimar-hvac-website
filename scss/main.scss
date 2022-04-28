@@ -299,27 +299,58 @@ body {
 .realization {
   width: 100vw;
   height: 100vh;
+
+  &__h3 {
+    color: $white;
+  }
 }
 
 .realization__box {
-  margin: 4rem auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 2rem auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 
-  .realization__box--image {
-    height: 30rem;
-    width: 30rem;
+  &--image {
+    height: 40%;
+    width: 90%;
     background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    border-radius: 8px;
   }
 
-  .realization__box--text {
-    height: 30rem;
-    width: 30rem;
-    background-color: blue;
+  &--text {
+    //height: 40%;
+    width: 90%;
+    text-align: center;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white;
+    padding: 1rem;
+    border-radius: 8px;
+
+    h3 {
+      color: $yellowColorText;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+  }
+
+  &--btn {
+    padding: 5px 10px;
+    background-color: $blueColorText;
+    color: $yellowColorText;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+
   }
 }
 
