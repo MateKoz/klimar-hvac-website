@@ -42,3 +42,6 @@ $('.trusted__carousel').slick({
         }
     ]
 });
+
+
+

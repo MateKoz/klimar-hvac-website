@@ -15,7 +15,7 @@
   position: relative;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: normal;
   padding-top: 5rem;
@@ -607,8 +607,10 @@ body {
 
 .realization {
   position: relative;
-  height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .realization__bg--shadow {
   background-color: #000000;
@@ -632,59 +634,83 @@ body {
   background-size: cover;
   background-image: url(../img/realization/realization-bg-small.jpg);
   width: 100%;
+  height: 100%;
   opacity: 0.9;
-  height: 100vh;
   z-index: -1;
 }
 
-.realization {
-  width: 100vw;
-  height: 100vh;
-}
 .realization__h3 {
   color: white;
+  margin-bottom: 1.5rem;
 }
 
 .realization__box {
-  width: 100vw;
-  height: 100vh;
-  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.realization__box--card {
+  width: 90%;
+  background-color: rgba(17, 17, 17, 0.52);
+  margin: 1rem;
+  border-radius: 8px;
+}
+.realization__box .realization__box--img {
+  height: 25rem;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+}
+.realization__box .realization__box--img img {
+  height: 25rem;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.realization__box .realization__box--text {
+  padding: 1rem;
+  color: white;
+}
+.realization__box .realization__box--text h3 {
+  margin: 1rem;
+}
+.realization__box .realization__box--text p {
+  margin: 1rem;
+}
+
+.realization__description {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.realization__box--image {
-  height: 40%;
-  width: 90%;
-  background-image: url(../img/realization/wind-turbine-gd40f3a67e_1920.jpg);
-  background-position: center;
-  background-size: contain;
-  border-radius: 8px;
-}
-.realization__box--text {
-  width: 90%;
+  justify-content: center;
   text-align: center;
-  margin: 1rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-}
-.realization__box--text h3 {
-  color: #ffd13b;
-}
-.realization__box--text p {
-  margin: 1rem 0;
-}
-.realization__box--btn {
-  padding: 5px 10px;
-  background-color: dodgerblue;
-  color: #ffd13b;
-  border-radius: 2px;
-  border: none;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.realization__description--paragraph {
   margin-top: 1rem;
+  padding: 2rem;
+  color: white;
+}
+.realization__description--paragraph span {
+  color: #ffd13b;
+  font-weight: bold;
+}
+.realization__description--btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border-radius: 8px;
+  color: #ffd13b;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.realization__description--btn:hover {
+  transform: scale(1.1);
+  background-color: #ffd13b;
+  color: dodgerblue;
 }
 
 .footer {
@@ -761,6 +787,14 @@ body {
   }
   .header__text--paragraph {
     font-size: 2rem;
+  }
+
+  .realization__box--card {
+    width: 40%;
+  }
+
+  .realization__bg {
+    background-image: url(../img/realization/realization-bg-big.jpg);
   }
 }
 
