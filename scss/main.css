@@ -951,6 +951,23 @@ body {
   }
 }
 @media (min-width: 580px) {
+  .header .header__text--box {
+    width: 40rem;
+    padding: 30px;
+    left: 50%;
+    top: 37%;
+  }
+  .header__text--main {
+    font-size: 3rem;
+  }
+  .header__text--paragraph {
+    font-size: 2rem;
+  }
+
+  .realization__box--card {
+    width: 40%;
+  }
+
   .why__us--box {
     width: 40%;
     padding: 2rem;
