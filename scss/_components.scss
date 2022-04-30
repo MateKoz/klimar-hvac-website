@@ -36,13 +36,28 @@
 }
 
 .underline {
-  &::before {
-  content: "";
-  height: 3px;
   width: 100%;
-  background-color: $blueColorText;
-  position: absolute;
-  bottom: 0;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: $blueColorText;
+    position: absolute;
+    bottom: 0;
+  }
 }
+
+
+.top-line {
+  width: 100%;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: $blueColorText;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+  }
 }
 
