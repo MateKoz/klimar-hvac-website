@@ -713,6 +713,23 @@ body {
   color: dodgerblue;
 }
 
+.why__us--main {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.why__us--box {
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  background-color: #dfe4f8;
+  border-radius: 8px;
+}
+
 .footer {
   text-align: center;
 }

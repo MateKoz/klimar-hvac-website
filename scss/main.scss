@@ -263,6 +263,7 @@ body {
 .realization {
   position: relative;
   width: 100vw;
+  //height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,6 +309,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+
   &--card {
     width: 90%;
     //height: 55%;
@@ -380,6 +382,25 @@ body {
       color: $blueColorText;
     }
   }
+}
+
+/////////////////////////////////////////
+/////why us
+////////////////////////////////////////
+.why__us--main {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.why__us--box {
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 1.5rem;
+  margin: .5rem;
+  background-color: $backgroundColor;
+  border-radius: 8px;
 }
 
 ///////////////////////////////
@@ -491,7 +512,7 @@ body {
   }
 }
 
-@media(min-width:  580px) {
+@media(min-width: 580px) {
 
 
 }
