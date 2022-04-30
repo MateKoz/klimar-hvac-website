@@ -61,3 +61,15 @@
   }
 }
 
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: $blueColorText;
+  border-radius: 8px;
+  color: $yellowColorText;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: bold;
+}
