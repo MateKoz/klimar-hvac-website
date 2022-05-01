@@ -73,3 +73,13 @@
   transition: .3s;
   font-weight: bold;
 }
+
+.btn-animation {
+  transition: .3s;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $yellowColorText;
+    color: $blueColorText;
+  }
+}
