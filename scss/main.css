@@ -89,6 +89,10 @@
   color: dodgerblue;
 }
 
+.black-btn {
+  background-color: black;
+}
+
 .cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,7 +432,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
 }
 
 body {
@@ -517,6 +520,7 @@ body {
 .header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
   z-index: 500;
   background-color: #fff;
+  box-shadow: 2px 2px 3px black;
 }
 .header__text--box {
   display: flex;
@@ -897,6 +901,8 @@ body {
 
 .contact__box {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contact__label {
@@ -914,10 +920,11 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 4rem;
 }
 .contact__label .contact__form-top .contact__form-label {
   margin-top: 1.5rem;
+  font-weight: bold;
 }
 .contact__label .contact__form-top .contact__form-input {
   margin-top: 0.5rem;
@@ -937,13 +944,16 @@ body {
   padding: 0.5em 1rem;
 }
 
+.contact__form-bottom {
+  width: 100%;
+}
 .contact__form-bottom .contact__form-name {
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
 .contact__form-bottom .contact__form {
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
 }
 .contact__form-bottom .contact__form-job {
   margin-bottom: 0.8rem;
@@ -961,11 +971,32 @@ body {
   top: -40px;
 }
 
+.contact__bottom {
+  width: 100%;
+}
+.contact__bottom .bottom__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact__bottom .bottom__cards .bottom__card {
+  padding: 1.5rem 3rem;
+}
+.contact__bottom .bottom__cards .bottom__card .bottom__card--heading {
+  margin-top: 1rem;
+}
+.contact__bottom .bottom__cards .bottom__card .card__info {
+  margin-bottom: 1rem;
+}
+
 .footer {
   text-align: center;
 }
 
 @media (min-width: 992px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
   .work__bottom-btn {
     width: 30%;
   }
@@ -1047,12 +1078,19 @@ body {
   }
 }
 @media (min-width: 768px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
   .contact__form-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
   .contact__form-bottom .contact__form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     width: 40%;
   }
 

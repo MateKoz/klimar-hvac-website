@@ -17,7 +17,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
 }
 
 body {
@@ -91,6 +90,7 @@ body {
     opacity: 0.15;
   }
 
+
   .hamburger {
     position: fixed;
     top: 2em;
@@ -101,6 +101,7 @@ body {
     &-inner, &-inner::before, &-inner::after {
       z-index: 500;
       background-color: #fff;
+      box-shadow: 2px 2px 3px black;
     }
   }
 
@@ -560,6 +561,8 @@ body {
 //////////////////////////////
 .contact__box {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contact__label {
@@ -578,10 +581,11 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-top: 1rem;
-    padding: 2rem;
+    padding: 4rem;
 
     .contact__form-label {
       margin-top: 1.5rem;
+      font-weight: bold;
     }
 
     .contact__form-input {
@@ -607,6 +611,8 @@ body {
 }
 
 .contact__form-bottom {
+  width: 100%;
+
 
   .contact__form-name {
     font-weight: bold;
@@ -615,7 +621,7 @@ body {
 
   .contact__form {
     margin: 1rem;
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
 
     &-job {
       margin-bottom: 0.8rem;
@@ -633,9 +639,28 @@ body {
       background-color: $blueColorText;
       left: -10px;
       top: -40px;
-
     }
+  }
+}
 
+.contact__bottom {
+  width: 100%;
+
+  .bottom__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .bottom__card {
+      padding: 1.5rem 3rem;
+
+      .bottom__card--heading {
+        margin-top: 1rem;
+      }
+
+      .card__info {
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 
@@ -650,6 +675,10 @@ body {
 //media query
 
 @media(min-width: 992px) {
+  html {
+    scroll-padding-top: 100px;
+
+  }
 
   .work__bottom-btn {
     width: 30%;
@@ -744,11 +773,21 @@ body {
 
 @media(min-width: 768px) {
 
+  html {
+    scroll-padding-top: 100px;
+
+  }
+
   .contact__form-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    .contact__form{
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
       width: 40%;
     }
   }
