@@ -1091,7 +1091,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 40%;
+    width: 30%;
   }
 
   .header .header__text--box {
