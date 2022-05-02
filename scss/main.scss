@@ -1,6 +1,6 @@
 @import "footer";
 @import "colors";
-@import "large";
+//@import "large";
 @import "components";
 @import "mixin";
 @import "cards";
@@ -90,7 +90,6 @@ body {
     opacity: 0.15;
   }
 
-
   .hamburger {
     position: fixed;
     top: 2em;
@@ -104,7 +103,6 @@ body {
       box-shadow: 2px 2px 3px black;
     }
   }
-
 
   &__text--box {
     display: flex;
@@ -218,6 +216,7 @@ body {
 ////////////////////////////
 ///offer
 ////////////////////////////
+
 .offer {
   position: relative;
   width: 100vw;
@@ -621,7 +620,8 @@ body {
 
   .contact__form {
     margin: 1rem;
-    padding: 1.5rem 3rem;
+    padding: 2rem;
+
 
     &-job {
       margin-bottom: 0.8rem;
@@ -643,23 +643,19 @@ body {
   }
 }
 
-.contact__bottom {
-  width: 100%;
+.bottom__cards {
+  display: flex;
+  flex-wrap: wrap;
 
-  .bottom__cards {
-    display: flex;
-    flex-wrap: wrap;
+  .bottom__card {
+    padding: 1.5rem 3rem;
 
-    .bottom__card {
-      padding: 1.5rem 3rem;
+    .bottom__card--heading {
+      margin-top: 1rem;
+    }
 
-      .bottom__card--heading {
-        margin-top: 1rem;
-      }
-
-      .card__info {
-        margin-bottom: 1rem;
-      }
+    .card__info {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -674,10 +670,116 @@ body {
 
 //media query
 
+@media(min-width: 580px) {
+
+  .header {
+    .header__text--box {
+      width: 40rem;
+      padding: 30px;
+      left: 50%;
+      top: 37%;
+    }
+
+    &__text--main {
+      font-size: 3rem;
+    }
+
+    &__text--paragraph {
+      font-size: 2rem;
+    }
+  }
+
+  .realization__box--card {
+    width: 40%;
+  }
+  .why__us--box {
+    width: 40%;
+    padding: 2rem;
+    margin: 0.5rem 0.5rem;
+  }
+  .work__boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .lower__box {
+      width: 45%;
+      margin: 1rem 1rem;
+    }
+
+    .work__bottom-btn {
+      width: 40rem;
+    }
+  }
+}
+
+
+@media(min-width: 768px) {
+
+
+  .contact__form-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 35%;
+    }
+  }
+
+  .header {
+    .header__text--box {
+      width: 40rem;
+      padding: 30px;
+      left: 50%;
+      top: 37%;
+    }
+
+    &__text--main {
+      font-size: 3rem;
+    }
+
+    &__text--paragraph {
+      font-size: 2rem;
+    }
+  }
+
+  .realization__box--card {
+    width: 40%;
+  }
+
+  .realization__bg {
+    background-image: url(../img/realization/realization-bg-big.jpg);
+  }
+
+  .work__background {
+    background-image: url("../img/work/bg_big.jpg");
+  }
+}
+
+
 @media(min-width: 992px) {
+
   html {
     scroll-padding-top: 100px;
+  }
 
+  .contact__form-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 30%;
+    }
   }
 
   .work__bottom-btn {
@@ -762,104 +864,9 @@ body {
   }
   .work__boxes {
     margin-top: 2rem;
-    display: block;
   }
 
   .item-img {
     height: 20rem;
-  }
-}
-
-
-@media(min-width: 768px) {
-
-  html {
-    scroll-padding-top: 100px;
-
-  }
-
-  .contact__form-bottom {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .contact__form {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-
-      width: 30%;
-    }
-  }
-
-  .header {
-    .header__text--box {
-      width: 40rem;
-      padding: 30px;
-      left: 50%;
-      top: 37%;
-    }
-
-    &__text--main {
-      font-size: 3rem;
-    }
-
-    &__text--paragraph {
-      font-size: 2rem;
-    }
-  }
-
-  .realization__box--card {
-    width: 40%;
-  }
-
-  .realization__bg {
-    background-image: url(../img/realization/realization-bg-big.jpg);
-  }
-
-  .work__background {
-    background-image: url("../img/work/bg_big.jpg");
-  }
-}
-
-@media(min-width: 580px) {
-  .header {
-    .header__text--box {
-      width: 40rem;
-      padding: 30px;
-      left: 50%;
-      top: 37%;
-    }
-
-    &__text--main {
-      font-size: 3rem;
-    }
-
-    &__text--paragraph {
-      font-size: 2rem;
-    }
-  }
-
-  .realization__box--card {
-    width: 40%;
-  }
-  .why__us--box {
-    width: 40%;
-    padding: 2rem;
-    margin: 0.5rem 0.5rem;
-  }
-  .work__boxes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .lower__box {
-      width: 45%;
-      margin: 1rem 1rem;
-    }
-
-    .work__bottom-btn {
-      width: 40rem;
-    }
   }
 }

@@ -6,4 +6,17 @@
   .nav-mobile {
     display: none;
   }
+  .contact__form-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 30%;
+    }
+  }
 }
